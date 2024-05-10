@@ -27,7 +27,10 @@ const Weather = () => {
           <h2>Feels Like: {weatherData.temperatureApparent}</h2>
           <h2>Humidity: {weatherData.humidity}</h2>
           <h2>Wind Speed: {weatherData.windSpeed}</h2>
+          <h2>Wind Direction: {weatherData.windDirection}</h2>
           <h2>UV Index: {weatherData.uvIndex}</h2>
+          <h2>Sunrise Time: {weatherData.sunriseTime}</h2>
+          <h2>Sunset Time: {weatherData.sunsetTime}</h2>
           {/* Add more weather parameters here */}
         </div>
       ) : (
