@@ -52,6 +52,7 @@ const convertWindDirection = (degrees) => {
       <h1>Weather App</h1>
       {weatherData ? (
         <div>
+          <h2>Forecast: {weatherData.weatherCode}</h2>
           <h2>Temperature: {convertToCelsius(weatherData.temperature)}°F</h2>
           {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
           <h2>Humidity: {weatherData.humidity}%</h2>
