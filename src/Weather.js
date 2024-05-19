@@ -67,6 +67,8 @@ const convertWindDirection = (degrees) => {
         <p>Loading Weather...</p>
       )}
     </div>
+
+    
   );
 };
 
