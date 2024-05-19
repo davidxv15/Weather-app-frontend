@@ -1,4 +1,16 @@
 p {
-    color: red;
+    color: rgb(139, 25, 25);
     font-size: 12px;
 }
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #4e7ef8;
+    color: #333;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
