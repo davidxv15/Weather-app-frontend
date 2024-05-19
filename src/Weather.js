@@ -60,11 +60,7 @@ const convertWindDirection = (degrees) => {
           <h2>Wind Direction: {weatherData.windDirection}° {convertWindDirection(weatherData.windDirection)}</h2>
 
           <h2>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h2>
-          {/* <h2>Visibility: {weatherData.visibility}</h2> */}
-          {/* <h2>UV Index: {weatherData.uvIndex}</h2>
-          <h2>Sunrise Time: {weatherData.sunriseTime}</h2>
-          <h2>Sunset Time: {weatherData.sunsetTime}</h2> */}
-          {/* Add more weather parameters here */}
+         
         </div>
       ) : (
         <p>Loading Weather...</p>
