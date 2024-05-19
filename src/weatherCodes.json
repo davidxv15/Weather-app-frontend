@@ -1,4 +1,4 @@
-"weatherCode": {
+ {
     "0": "Unknown",
     "1000": "Clear, Sunny",
     "1100": "Mostly Clear",
@@ -22,10 +22,8 @@
     "7000": "Ice Pellets",
     "7101": "Heavy Ice Pellets",
     "7102": "Light Ice Pellets",
-    "8000": "Thunderstorm"
-  },
-
-  "weatherCodeFullDay": {
+    "8000": "Thunderstorm",
+  
     "0": "Unknown",
     "1000": "Clear, Sunny",
     "1100": "Mostly Clear",
@@ -119,10 +117,8 @@
     "8001": "Mostly Clear and Thunderstorm",
     "8003": "Partly Cloudy and Thunderstorm",
     "8002": "Mostly Cloudy and Thunderstorm",
-    "8000": "Thunderstorm"
-  },
-
-  "weatherCodeDay":{
+    "8000": "Thunderstorm",
+  
     "0": "Unknown",
     "10000": "Clear, Sunny",
     "11000": "Mostly Clear",
@@ -216,10 +212,8 @@
     "80010": "Mostly Clear and Thunderstorm",
     "80030": "Partly Cloudy and Thunderstorm",
     "80020": "Mostly Cloudy and Thunderstorm",
-    "80000": "Thunderstorm"
-  },
-
-  "weatherCodeNight": {
+    "80000": "Thunderstorm",
+  
     "0": "Unknown",
     "10001": "Clear",
     "11001": "Mostly Clear",
