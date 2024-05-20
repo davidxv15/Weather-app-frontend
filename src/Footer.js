@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>Data provided by <a href="tomorrow.io" target="_blank" rel="noopener noreferrer">Tomorrow.io</a></p>
+      <p>Powered by <a href="https://www.tomorrow.io/" target="_blank" rel="noopener noreferrer">Tomorrow.io</a></p>
     </footer>
   );
 };
