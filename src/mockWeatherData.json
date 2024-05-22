@@ -1,0 +1,23 @@
+{
+    "timelines": {
+      "minutely": [
+        {
+          "time": "2023-11-01T00:00:00Z",
+          "values": {
+            "weatherCode": 1000,
+            "temperature": 15.0,
+            "temperatureApparent": 15.0,
+            "dewPoint": 10.0,
+            "humidity": 50,
+            "windSpeed": 5,
+            "windDirection": 180,
+            "windGust": 10,
+            "visibility": 10,
+            "sunriseTime": "2023-11-01T06:00:00Z",
+            "sunsetTime": "2023-11-01T18:00:00Z"
+          }
+        }
+      ]
+    }
+  }
+  

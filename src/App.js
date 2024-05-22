@@ -1,6 +1,6 @@
 import React from 'react';
 import Weather from './Weather';
-import Footer from './Footer';
+import Footer from './assets/components/Footer';
 import "./App.css";
 
 const App = () => {
