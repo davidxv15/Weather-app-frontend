@@ -28,8 +28,7 @@
     
     "1103": "/MostlyClear1103.png",
     "2101": "/LightFog2101.png",
-    "2102": "/Partly Cloudy and Light Fog",
-    // ADD
+    "2102": "/PartlyCloudyLtFog2102.png",
     "2103": "/LightFog2103,21030.png",
     "2106": "/Fog2106,21060.png",
     "2107": "/Fog2107,21070.png",
@@ -108,8 +107,7 @@
     "11030": "/MostlyClear1103.png",
     "21000": "/LightFog2100,21001.png",
     "21010": "/LightFog2101.png",
-    "21020": "/Partly Cloudy and Light Fog",
-    //ADD
+    "21020": "/PartlyCloudyLtFog2102.png",
     "21030": "/LightFog2103,21030.png",
     "21060": "/Fog2106,21060.png",
     "21070": "/Fog2107,21070.png",
