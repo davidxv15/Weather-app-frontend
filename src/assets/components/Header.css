@@ -1,0 +1,9 @@
+.header {
+    background-color: #190f64;
+    /* padding: 40px; */
+    /* padding-bottom: 15px; */
+    text-align: center;
+    color: white;
+    height: 7vh;
+    transform:translateY(-25px)
+}

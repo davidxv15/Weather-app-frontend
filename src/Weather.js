@@ -2,15 +2,23 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
-import "./App.css";
+import LocationSearchBar from "./assets/components/LocationSearchBar";
+import "./Weather.css";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
+  const [location, setLocation] = useState("42.3478,-71.0466");
 
+  const handleSearch = (newLocation) => {
+    setLocation(newLocation);
+  };
+  
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/weather");
+        const response = await axios.get("http://localhost:3000/weather", {
+          params: { location },
+        } );
         setWeatherData(response.data);
         console.log("Current Weather Code:", response.data.weatherCode);
       } catch (error) {
@@ -52,8 +60,10 @@ const Weather = () => {
   return (
     <div>
       <h1>Weather App</h1>
+      <LocationSearchBar onSearch={handleSearch} />
       {weatherData ? (
         <div>
+          <h2>Location: {location}</h2>
           <WeatherIcon code={weatherData.weatherCode} />
           <h2>
             Forecast:{" "}
