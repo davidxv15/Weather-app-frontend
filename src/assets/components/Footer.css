@@ -1,18 +1,19 @@
 p {
-    color: rgb(139, 25, 25);
+    color: rgb(0, 0, 0);
     font-size: 12px;
-    transform: translateY(-10px);
+    transform: translateY(-30px);
 }
 
 .footer {
+    font-size: 12px;
     padding: 20px;
     text-align: center;
-    background-color: #4e7ef8;
-    color: #333;
+    background-color: #3f5eac;
+    color: #000000;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
   }
   

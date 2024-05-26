@@ -8,6 +8,7 @@ import "./Weather.css";
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState("42.3478,-71.0466");
+  const [favorites, setFavorites] = useState([]);
 
   const handleSearch = (newLocation) => {
     setLocation(newLocation);
@@ -27,7 +28,7 @@ const Weather = () => {
     };
 
     fetchWeatherData();
-  }, []);
+  }, [location]);
 
   // Function to convert temperature from Celsius to Fahrenheit
   const convertToCelsius = (temperature) => {
