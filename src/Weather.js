@@ -13,13 +13,13 @@ const Weather = () => {
   const handleSearch = (newLocation) => {
     setLocation(newLocation);
   };
-  
+
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get("http://localhost:3000/weather", {
           params: { location },
-        } );
+        });
         setWeatherData(response.data);
         console.log("Current Weather Code:", response.data.weatherCode);
       } catch (error) {
