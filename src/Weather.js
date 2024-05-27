@@ -7,7 +7,7 @@ import "./Weather.css";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const [location, setLocation] = useState("42.3478,-71.0466");
+  const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
 
   const handleSearch = (newLocation) => {
@@ -16,6 +16,7 @@ const Weather = () => {
 
   useEffect(() => {
     const fetchWeatherData = async () => {
+      if (location) {
       try {
         const response = await axios.get("http://localhost:3000/weather", {
           params: { location },
@@ -25,6 +26,7 @@ const Weather = () => {
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
+    }
     };
 
     fetchWeatherData();
