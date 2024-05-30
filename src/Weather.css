@@ -2,3 +2,11 @@ h1 {
   color: maroon;
   /* margin-top: -5px; */
 }
+
+.Loading {
+  color:crimson;
+  font-size: 22px;
+  transform:translateY(50px);
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+}

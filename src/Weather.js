@@ -8,9 +8,11 @@ import "./Weather.css";
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
+  // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
 
   const handleSearch = (newLocation) => {
+    console.log("New location:", newLocation);
     setLocation(newLocation);
   };
 
@@ -18,6 +20,7 @@ const Weather = () => {
     const fetchWeatherData = async () => {
       if (location) {
       try {
+        console.log("Fetching weather data for location:", location);
         const response = await axios.get("http://localhost:3000/weather", {
           params: { location },
         });
@@ -49,13 +52,10 @@ const Weather = () => {
   const convertWindDirection = (degrees) => {
     // Normalize the degrees to ensure they fall within the range [0, 360)
     degrees = (degrees + 360) % 360;
-
     // Define the compass directions
     const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
-
     // Calculate the index of the direction based on the degrees
     const index = Math.round(degrees / 45) % 8;
-
     // Return the corresponding direction from the array
     return directions[index];
   };
@@ -85,7 +85,7 @@ const Weather = () => {
           <h2>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h2>
         </div>
       ) : (
-        <p>Loading Weather...</p>
+        <p className="Loading">Loading Weather...</p>
       )}
     </div>
   );

@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./LocationSearchBar.css";
 
 const LocationSearchBar = ({ onSearch }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(inputValue);
+    if (inputValue.trim()) {
+      onSearch(inputValue);
+      setInputValue("");
+    }
   };
 
   const handleInputChange = (e) => {
@@ -14,8 +17,7 @@ const LocationSearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="location-search-bar">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="location-search-bar">
       <input
         type="text"
         value={inputValue}
@@ -24,7 +26,6 @@ const LocationSearchBar = ({ onSearch }) => {
       />
       <button type="submit">Search</button>
       </form>
-    </div>
   );
 };
 
