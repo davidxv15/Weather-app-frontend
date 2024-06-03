@@ -7,7 +7,7 @@ import "./Weather.css";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
+  const [location, setLocation] = useState(""); //MAKE EMPTY
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
 
