@@ -22,7 +22,7 @@ const LocationSearchBar = ({ onSearch }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="Enter City, State, or Zip Code"
+        placeholder="Enter City"
       />
       <button type="submit">Search</button>
       </form>
