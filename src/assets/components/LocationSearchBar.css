@@ -32,14 +32,17 @@
     position: absolute;
     background-color: white;
     width: calc(100% - 22px);
+    transform: translateY(44px);
+    opacity: 0.9;
   }
   
   .suggestions-list li {
     padding: 8px;
     cursor: pointer;
+    color:rgb(15, 71, 28)
   }
   
   .suggestions-list li:hover {
-    background-color: #f0f0f0;
+    background-color: #cdbebe;
   }
   
