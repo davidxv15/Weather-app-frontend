@@ -3,7 +3,7 @@ import axios from 'axios';
 import debounce from 'lodash.debounce';
 import "./LocationSearchBar.css";
 
-const LocationSearchBar = ({ onSearch }) => {
+const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
@@ -65,7 +65,15 @@ const LocationSearchBar = ({ onSearch }) => {
           ))}
         </ul>
       )}
+      <select onChange={(e) => onSelectFavorite(e.target.value)}>
+        <option value="">Favorites</option>
+        {favorites.map((favorite, index) => (
+          <option key={index} value={favorite}>{favorite}</option>
+        ))}
+      </select>
+
       </form>
+      
   );
 };
 

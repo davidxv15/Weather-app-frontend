@@ -9,12 +9,25 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState(""); //MAKE EMPTY
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
     setLocation(newLocation);
   };
+
+  const handleSelectFavorite = (favoriteLocation) => {
+    setLocation(favoriteLocation);
+  };
+
+  const handleAddFavorite = () => {
+    if (location && !favorites.includes(location)) {
+      setFavorites([...favorites, location]);
+    }
+  }
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -63,26 +76,27 @@ const Weather = () => {
   return (
     <div>
       {/* <h1>Weather App</h1> */}
-      <LocationSearchBar onSearch={handleSearch} />
+      <LocationSearchBar onSearch={handleSearch} favorites={favorites} onSelectFavorite={handleSelectFavorite} />
+      <button onClick={handleAddFavorite}>Favorite</button>
       {weatherData ? (
         <div>
           <h2>Location: {location}</h2>
           <WeatherIcon code={weatherData.weatherCode} />
-          <h2>
+          <h4>
             Forecast:{" "}
             {weatherCodes[weatherData.weatherCode] ||
               "Description not available"}
-          </h2>
-          <h2>Temperature: {convertToCelsius(weatherData.temperature)}°F</h2>
+          </h4>
+          <h4>Temperature: {convertToCelsius(weatherData.temperature)}°F</h4>
           {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
-          <h2>Humidity: {weatherData.humidity}%</h2>
-          <h2>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h2>
-          <h2>
+          <h4>Humidity: {weatherData.humidity}%</h4>
+          <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
+          <h4>
             Wind Direction: {weatherData.windDirection}°{" "}
             {convertWindDirection(weatherData.windDirection)}
-          </h2>
+          </h4>
 
-          <h2>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h2>
+          <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h4>
         </div>
       ) : (
         <p className="Loading">Loading Weather...</p>
