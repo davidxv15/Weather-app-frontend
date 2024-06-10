@@ -9,10 +9,7 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState(""); //MAKE EMPTY
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
-  const [favorites, setFavorites] = useState(() => {
-    const savedFavorites = localStorage.getItem('favorites');
-    return savedFavorites ? JSON.parse(savedFavorites) : [];
-  });
+  const [favorites, setFavorites] = useState([]);
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
@@ -23,11 +20,31 @@ const Weather = () => {
     setLocation(favoriteLocation);
   };
 
-  const handleAddFavorite = () => {
-    if (location && !favorites.includes(location)) {
-      setFavorites([...favorites, location]);
+  const fetchFavorites = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/favorites");
+      setFavorites(response.data.map(fav => fav.location));
+    } catch (error) {
+      console.error("Error fetching favorites:", error);
     }
-  }
+  };
+
+  const handleAddFavorite = async () => {
+    if (location) {
+      try {
+        const response = await axios.post("http://localhost:3000/favorites", { location });
+        console.log(response.data.message);
+        fetchFavorites();
+      } catch (error) {
+        console.error("Error handling favorite:", error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchFavorites();
+  }, []);
+
 
   useEffect(() => {
     const fetchWeatherData = async () => {
