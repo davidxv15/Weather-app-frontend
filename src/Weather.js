@@ -10,6 +10,7 @@ const Weather = () => {
   const [location, setLocation] = useState(""); //MAKE EMPTY
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
+  const [isFavorited, setIsFavorited] = useState(false);
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
@@ -35,6 +36,7 @@ const Weather = () => {
         const response = await axios.post("http://localhost:3000/favorites", { location });
         console.log(response.data.message);
         fetchFavorites();
+        setIsFavorited(!isFavorited)
       } catch (error) {
         console.error("Error handling favorite:", error);
       }
@@ -56,6 +58,10 @@ const Weather = () => {
         });
         setWeatherData(response.data);
         console.log("Current Weather Code:", response.data.weatherCode);
+
+        // will check if the location is already favorited!
+        const isFavorite = favorites.includes(location);
+        setIsFavorited(isFavorite);
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
@@ -94,7 +100,12 @@ const Weather = () => {
     <div>
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar onSearch={handleSearch} favorites={favorites} onSelectFavorite={handleSelectFavorite} />
-      <button onClick={handleAddFavorite}>Favorite</button>
+      <button
+        className={`favorite-button ${isFavorited ? 'favorited' : ''}`}
+        onClick={handleAddFavorite}
+      >
+        {isFavorited ? 'Unfavorite' : 'Favorite'}
+      </button>
       {weatherData ? (
         <div>
           <h2>Location: {location}</h2>

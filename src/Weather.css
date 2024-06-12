@@ -18,3 +18,22 @@ h4 {
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(38px);
 }
+
+.favorite-button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.favorite-button.favorited {
+  background-color: #ff6347; /* Tomato color for favorited */
+}
+
+.favorite-button:hover {
+  background-color: #888;
+}
