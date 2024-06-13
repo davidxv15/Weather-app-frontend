@@ -66,7 +66,7 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
         </ul>
       )}
       <select onChange={(e) => onSelectFavorite(e.target.value)}>
-        <option value="">Favorites</option>
+        <option value="">Favorite cities</option>
         {favorites.map((favorite, index) => (
           <option key={index} value={favorite}>{favorite}</option>
         ))}

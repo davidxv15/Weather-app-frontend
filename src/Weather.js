@@ -24,7 +24,7 @@ const Weather = () => {
   const fetchFavorites = async () => {
     try {
       const response = await axios.get("http://localhost:3000/favorites");
-      setFavorites(response.data.map(fav => fav.location));
+      setFavorites(response.data.map((fav) => fav.location));
     } catch (error) {
       console.error("Error fetching favorites:", error);
     }
@@ -33,10 +33,12 @@ const Weather = () => {
   const handleAddFavorite = async () => {
     if (location) {
       try {
-        const response = await axios.post("http://localhost:3000/favorites", { location });
+        const response = await axios.post("http://localhost:3000/favorites", {
+          location,
+        });
         console.log(response.data.message);
         fetchFavorites();
-        setIsFavorited(!isFavorited)
+        setIsFavorited(!isFavorited);
       } catch (error) {
         console.error("Error handling favorite:", error);
       }
@@ -47,25 +49,24 @@ const Weather = () => {
     fetchFavorites();
   }, []);
 
-
   useEffect(() => {
     const fetchWeatherData = async () => {
       if (location) {
-      try {
-        console.log("Fetching weather data for location:", location);
-        const response = await axios.get("http://localhost:3000/weather", {
-          params: { location },
-        });
-        setWeatherData(response.data);
-        console.log("Current Weather Code:", response.data.weatherCode);
+        try {
+          console.log("Fetching weather data for location:", location);
+          const response = await axios.get("http://localhost:3000/weather", {
+            params: { location },
+          });
+          setWeatherData(response.data);
+          console.log("Current Weather Code:", response.data.weatherCode);
 
-        // will check if the location is already favorited!
-        const isFavorite = favorites.includes(location);
-        setIsFavorited(isFavorite);
-      } catch (error) {
-        console.error("Error fetching weather data:", error);
+          // will check if the location is already favorited!
+          const isFavorite = favorites.includes(location);
+          setIsFavorited(isFavorite);
+        } catch (error) {
+          console.error("Error fetching weather data:", error);
+        }
       }
-    }
     };
 
     fetchWeatherData();
@@ -99,36 +100,42 @@ const Weather = () => {
   return (
     <div>
       {/* <h1>Weather App</h1> */}
-      <LocationSearchBar onSearch={handleSearch} favorites={favorites} onSelectFavorite={handleSelectFavorite} />
-      <button
-        className={`favorite-button ${isFavorited ? 'favorited' : ''}`}
-        onClick={handleAddFavorite}
-      >
-        {isFavorited ? 'Unfavorite' : 'Favorite'}
-      </button>
-      {weatherData ? (
-        <div>
-          <h2>Location: {location}</h2>
-          <WeatherIcon code={weatherData.weatherCode} />
-          <h4>
-            Forecast:{" "}
-            {weatherCodes[weatherData.weatherCode] ||
-              "Description not available"}
-          </h4>
-          <h4>Temperature: {convertToCelsius(weatherData.temperature)}°F</h4>
-          {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
-          <h4>Humidity: {weatherData.humidity}%</h4>
-          <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
-          <h4>
-            Wind Direction: {weatherData.windDirection}°{" "}
-            {convertWindDirection(weatherData.windDirection)}
-          </h4>
+      <LocationSearchBar
+        onSearch={handleSearch}
+        favorites={favorites}
+        onSelectFavorite={handleSelectFavorite}
+      />
+      <div className="wrapper">
+        <button
+          className={`favorite-button ${isFavorited ? "favorited" : ""}`}
+          onClick={handleAddFavorite}
+        >
+          {isFavorited ? "Unfavorite" : "Favorite"}
+        </button>
+        {weatherData ? (
+          <div>
+            <h2>Location: {location}</h2>
+            <WeatherIcon code={weatherData.weatherCode} />
+            <h4>
+              Forecast:{" "}
+              {weatherCodes[weatherData.weatherCode] ||
+                "Description not available"}
+            </h4>
+            <h4>Temperature: {convertToCelsius(weatherData.temperature)}°F</h4>
+            {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
+            <h4>Humidity: {weatherData.humidity}%</h4>
+            <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
+            <h4>
+              Wind Direction: {weatherData.windDirection}°{" "}
+              {convertWindDirection(weatherData.windDirection)}
+            </h4>
 
-          <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h4>
-        </div>
-      ) : (
-        <p className="Loading">Loading Weather...</p>
-      )}
+            <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h4>
+          </div>
+        ) : (
+          <p className="Loading">Loading Weather...</p>
+        )}
+      </div>
     </div>
   );
 };
