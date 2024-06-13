@@ -98,7 +98,7 @@ const Weather = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
@@ -121,7 +121,7 @@ const Weather = () => {
               {weatherCodes[weatherData.weatherCode] ||
                 "Description not available"}
             </h4>
-            <h4>Temperature: {convertToCelsius(weatherData.temperature)}°F</h4>
+            <h4>Temperature: {convertToCelsius(weatherData.temperature)}° F</h4>
             {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
             <h4>Humidity: {weatherData.humidity}%</h4>
             <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
@@ -130,7 +130,7 @@ const Weather = () => {
               {convertWindDirection(weatherData.windDirection)}
             </h4>
 
-            <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}ºF</h4>
+            <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}° F</h4>
           </div>
         ) : (
           <p className="Loading">Loading Weather...</p>

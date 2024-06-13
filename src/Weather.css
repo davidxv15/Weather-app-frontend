@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 * {
   background-color: rgb(158, 179, 201);
+  font-family: 'Gruppo', sans-serif;
 }
 
 h1 {
@@ -30,6 +34,13 @@ h4 {
 .favorite-button:hover {
   background-color: #392d2d;
 }
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
 
 .wrapper {
   width: 400px;
