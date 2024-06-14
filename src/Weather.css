@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Gruppo&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 
 * {
-  background-color: rgb(158, 179, 201);
-  font-family: 'Gruppo', sans-serif;
+  background-color: transparent;
+  font-family: 'Antonio', sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -18,40 +20,48 @@ h4 {
 
 .favorite-button {
   padding: 10px 20px;
-  background-color: #ccc;
+  background-color: #827979;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   color: #fff;
   transition: background-color 0.3s;
+  transform: translateX(5px);
 }
 
 .favorite-button.favorited {
-  background-color: #ad341e; 
+  background-color: #f0e50d; 
+  color: red;
 }
 
 .favorite-button:hover {
-  background-color: #392d2d;
+  background-color: #ad341e;
 }
 
 .container {
+  color: rgb(85, 178, 235);
   display: grid;
   place-items: center;
   height: 100vh;
+  background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
 .wrapper {
   width: 400px;
   border-radius: 10px;
-  padding: 30px;
+  padding-top: 1px;
+  margin: 40px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 252, 252, 0.91);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   transform: translateY(0);
-  /* opacity: 0; */
+  opacity: 0.6;
   animation: fadeIn 1.9s ease forwards;
 }
 
