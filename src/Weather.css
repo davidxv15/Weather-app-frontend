@@ -19,19 +19,21 @@ h4 {
 
 
 .favorite-button {
-  padding: 10px 20px;
+  padding: 10px 10px;
+  margin: 1px;
   background-color: #827979;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: 6rem;
   color: #fff;
   transition: background-color 0.3s;
-  transform: translateX(5px);
+  transform: translateX(25px);
 }
 
 .favorite-button.favorited {
-  background-color: #f0e50d; 
+  background-color: #ffffff93; 
   color: red;
 }
 
@@ -60,8 +62,8 @@ h4 {
   border: 1px solid rgba(255, 252, 252, 0.91);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  transform: translateY(0);
-  opacity: 0.6;
+  transform: translateY(-40px);
+  opacity: 1;
   animation: fadeIn 1.9s ease forwards;
 }
 
