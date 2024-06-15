@@ -30,6 +30,7 @@ h4 {
   color: #fff;
   transition: background-color 0.3s;
   transform: translateX(25px);
+  opacity: .6;
 }
 
 .favorite-button.favorited {
