@@ -34,11 +34,13 @@ h4 {
 
 .favorite-button.favorited {
   background-color: #ffffff93; 
-  color: red;
+  color: rgba(5, 3, 27, 0.305);
 }
 
 .favorite-button:hover {
-  background-color: #ad341e;
+  background-color: #fc280358;
+  color: white;
+  transition: background-color 0.9s;
 }
 
 .container {
