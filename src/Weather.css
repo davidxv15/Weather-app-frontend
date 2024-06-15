@@ -5,7 +5,7 @@
 * {
   background-color: transparent;
   font-family: 'Antonio', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
@@ -44,7 +44,7 @@ h4 {
 }
 
 .container {
-  color: rgb(85, 178, 235);
+  color: rgb(59, 203, 251);
   display: grid;
   place-items: center;
   height: 100vh;
@@ -68,6 +68,13 @@ h4 {
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;
 }
+
+.weather-info h4 {
+  margin: 1px 0; /* Reduce vertical space between h4 elements */
+  letter-spacing: 1px; /* Increase horizontal space between letters */
+  font-size: 28px; /* Enlarge the font */
+}
+
 
 .Loading {
   color:crimson;

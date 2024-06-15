@@ -8,7 +8,7 @@
   .location-search-bar input {
     color: white;
     padding: 10px;
-    font-size: 16px;
+    font-size: 22px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
@@ -34,23 +34,25 @@
     position: absolute;
     color: white;
     background-color: white;
-    width: calc(100% - 22px);
+    width: calc(100% - 132px);
     transform: translateY(44px);
-    opacity: 0.85;
+    opacity: 0.93;
     z-index: 3;
     border-radius: 8px;
   }
   
   .suggestions-list li {
-    padding: 8px;
+    padding: 4px;
+    font-size: 22px;
     cursor: pointer;
     color:rgb(11, 11, 111);
     background-color:rgba(171, 182, 192, 0.863);
+    border: 1px solid #3934956c;
     /* width: 77%; */
   }
   
   .suggestions-list li:hover {
-    background-color: #cdbebe;
+    background-color: #eda3a3;
   }
   
   select {

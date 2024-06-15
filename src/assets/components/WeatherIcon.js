@@ -11,7 +11,7 @@ const WeatherIcon = ({ code }) => {
     <img
       src={getIconUrl(code)}
       alt="Weather Icon"
-      style={{ width: "100px", height: "100px" }}
+      style={{ width: "90px", height: "90px" }}
     />
   );
 };

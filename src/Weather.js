@@ -113,7 +113,7 @@ const Weather = () => {
           {isFavorited ? "Unfavorite" : "Favorite"}
         </button> */}
         {weatherData ? (
-          <div>
+          <div className="weather-info">
             <h2>{location}
             <button
           className={`favorite-button ${isFavorited ? "favorited" : ""}`}
