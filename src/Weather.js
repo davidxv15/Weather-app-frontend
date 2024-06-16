@@ -106,21 +106,15 @@ const Weather = () => {
         onSelectFavorite={handleSelectFavorite}
       />
       <div className="wrapper">
-        {/* <button
-          className={`favorite-button ${isFavorited ? "favorited" : ""}`}
-          onClick={handleAddFavorite}
-        >
-          {isFavorited ? "Unfavorite" : "Favorite"}
-        </button> */}
         {weatherData ? (
           <div className="weather-info">
-            <h2>{location}
+            <h2>{location}</h2>
             <button
           className={`favorite-button ${isFavorited ? "favorited" : ""}`}
           onClick={handleAddFavorite}
         >
           {isFavorited ? "Unfavorite" : "Favorite"}
-        </button></h2>
+        </button>
             <WeatherIcon code={weatherData.weatherCode} />
             <h4>
               Forecast:{" "}
