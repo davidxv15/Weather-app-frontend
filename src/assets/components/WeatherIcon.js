@@ -1,5 +1,6 @@
 import React from "react";
 import iconMapping from "../../weatherIconMapping.json";
+import "./WeatherIcon.css"
 
 const WeatherIcon = ({ code }) => {
   const getIconUrl = (code) => {

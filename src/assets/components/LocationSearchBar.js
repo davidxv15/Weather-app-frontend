@@ -53,9 +53,8 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="Enter City"
+        placeholder="Enter city to get weather..."
       />
-      <button type="submit">Search</button>
       {suggestions.length > 0 && (
         <ul className="suggestions-list">
           {suggestions.map((suggestion, index) => (
@@ -65,13 +64,15 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
           ))}
         </ul>
       )}
+      <div className="controls">
+      <button type="submit">Search</button>
       <select onChange={(e) => onSelectFavorite(e.target.value)}>
         <option className="option" value="">Favorite cities</option>
         {favorites.map((favorite, index) => (
           <option className="option" key={index} value={favorite}>{favorite}</option>
         ))}
-      </select>
-
+        </select>
+       </div>
       </form>
       
   );
