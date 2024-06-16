@@ -5,9 +5,10 @@
     justify-content: center;
     margin: 20px;
     align-items: center;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    transform: translateY(30px)
   }
   
   .location-search-bar input {
@@ -17,7 +18,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px; 
-    width: 60vw; 
+    width: 65vw; 
     max-width: 500px; 
   }
   
@@ -74,10 +75,16 @@
     border-radius: 5px;
     align-items: center;
     font-size: 16px;
+    max-width:50vw;
   }
 
   .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    /* transform:translateY(30px) */
+  }
+
+  option {
+    text-decoration: underline;
   }

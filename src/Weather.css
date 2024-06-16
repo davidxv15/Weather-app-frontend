@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Gruppo&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Gruppo&family=Honk&family=Raleway+Dots&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   background-color: transparent;
-  font-family: 'Antonio', sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway Dots', sans-serif;
+  font-weight: 800;
 }
 
 h1 {
-  color: maroon;
-  /* margin-top: -5px; */
+  position:relative;
+  color: rgb(11, 210, 228);
+  font-size: 50px;
+  margin-top: -5px;
+  transform: translateY(30px);
+  left: 4vw;
+  /* align-content: center; */
+  text-align: center;
 }
 
 h4 {
@@ -20,11 +24,11 @@ h4 {
 .favorite-button {
   padding: 5px 10px;
   margin: 1px;
-  background-color: #827979;
+  background-color: #706060;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   width: 4.5rem;
   height: 1.5rem;
   color: #fff;
@@ -38,7 +42,7 @@ h4 {
 
 .favorite-button.favorited {
   background-color: #ffffff93; 
-  color: rgba(5, 3, 27, 0.305);
+  color: rgba(0, 0, 0, 0.939);
 }
 
 .favorite-button:hover {
@@ -72,7 +76,7 @@ h4 {
   border: 1px solid rgba(255, 252, 252, 0.91);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  transform: translateY(-40px);
+  transform: translateY(-10px);
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
@@ -94,9 +98,9 @@ h2 {
 }
 
 .Loading {
-  color:crimson;
+  color:rgb(13, 153, 146);
   font-size: 22px;
-  transform:translateY(250px);
+  /* transform:translateY(5px); */
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(38px);
 }
