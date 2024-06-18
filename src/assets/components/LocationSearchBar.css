@@ -45,13 +45,13 @@
     width: 80vw;
     align-items: center;
     /* max-width: 85%; */
-    transform: translateY(84px);
-    top: 6rem;
-    right: 15vw;
-    left: 15vw;
+    transform: translateY(14px);
+    top: 2rem;
+    /* right: 15vw;
+    left: 15vw; */
     /* transform: translateX(-8rem); */
     opacity: 0.93;
-    z-index: 3;
+    z-index: 99;
     border-radius: 8px;
   }
   
@@ -62,6 +62,7 @@
     color:rgb(11, 11, 111);
     background-color:rgba(171, 182, 192, 0.863);
     border: 1px solid #3934956c;
+    z-index: 3;
     /* width: 77%; */
   }
   
