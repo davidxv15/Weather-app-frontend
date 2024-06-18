@@ -6,6 +6,11 @@
   font-weight: 800;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   position:relative;
   color:rgb(59, 203, 251);
@@ -56,8 +61,9 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* place-items: center; */
-  height: 100vh;
+  justify-content: center;
+  /* height: 100vh; */
+  min-height: 100vh;
   width: 100%;
   padding: 20px;
   background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
@@ -67,10 +73,11 @@ h4 {
 }
 
 .wrapper {
+  position: relative;
   width: 90%;
   max-width: 400px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 6px;
   margin: 40px;
   text-align: center;
   border: 2px solid rgba(255, 252, 252, 0.91);
@@ -80,7 +87,7 @@ h4 {
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
-  z-index: 0;
+  z-index: 1;
 }
 
 .weather-info h4 {

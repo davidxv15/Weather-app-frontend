@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Weather />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
