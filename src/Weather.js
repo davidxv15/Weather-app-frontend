@@ -59,8 +59,22 @@ const Weather = () => {
           const response = await axios.get("http://localhost:3000/weather", {
             params: { location },
           });
-          setWeatherData(response.data);
-          console.log("Current Weather Code:", response.data.weatherCode);
+
+          let data = response.data;
+
+          // Determine if it's night time at the location
+          const isNightTime = checkIfNightTime(data);
+
+          // Modify weatherCode if it's night time
+          if (isNightTime) {
+            data.weatherCode = `${data.weatherCode}1`;
+            console.log(`Modified weatherCode for night time: ${data.weatherCode}`);
+          } else {
+            console.log(`Weather code remains unchanged for day time: ${data.weatherCode}`);
+          }
+
+          setWeatherData(data);
+          console.log("Current Weather Code:", data.weatherCode);
 
           // will check if the location is already favorited!
           const isFavorite = favorites.includes(location);
@@ -73,6 +87,15 @@ const Weather = () => {
 
     fetchWeatherData();
   }, [location]);
+
+  const checkIfNightTime = (data) => {
+    const currentTime = new Date();
+    const sunrise = new Date(data.sunriseTime);
+    const sunset = new Date(data.sunsetTime);
+
+    return currentTime < sunrise || currentTime > sunset;
+  };
+
 
   // Function to convert temperature from Celsius to Fahrenheit
   const convertToCelsius = (temperature) => {
