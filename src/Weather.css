@@ -111,8 +111,20 @@ h2 {
 .Loading {
   color:rgb(59, 203, 251);
   font-size: 22px;
-  /* transform:translateY(5px); */
+  transform:translateY(8px);
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(38px);
 }
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.Loader {
+  /* transform: scale(2.5);  */
+  padding-bottom: 15px;
+}

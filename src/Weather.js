@@ -4,6 +4,7 @@ import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
 import LocationSearchBar from "./assets/components/LocationSearchBar";
 import Loader from 'react-loaders';
+import 'loaders.css/loaders.min.css';
 import "./Weather.css";
 
 const Weather = () => {
@@ -136,7 +137,11 @@ const Weather = () => {
             <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}° F</h4>
           </div>
         ) : (
-          <p className="Loading">Loading Weather...</p>
+          <div className="loading-container">
+            <p className="Loading">Checking Forecasts...</p>
+            <Loader type="ball-pulse" active />
+          </div>
+
         )}
       </div>
     </div>
