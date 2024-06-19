@@ -3,6 +3,7 @@ import axios from "axios";
 import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
 import LocationSearchBar from "./assets/components/LocationSearchBar";
+import Loader from 'react-loaders';
 import "./Weather.css";
 
 const Weather = () => {
@@ -96,6 +97,8 @@ const Weather = () => {
     // Return the corresponding direction from the array
     return directions[index];
   };
+
+  let loader = <Loader type="ball-pulse-rise" />
 
   return (
     <div className="container">
