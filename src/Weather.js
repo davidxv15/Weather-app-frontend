@@ -26,7 +26,8 @@ const Weather = () => {
   const fetchFavorites = async () => {
     try {
       const response = await axios.get("http://localhost:3000/favorites");
-      setFavorites(response.data.map((fav) => fav.location));
+      const sortedFavorites = response.data.map((fav) => fav.location).sort();
+      setFavorites(sortedFavorites);
     } catch (error) {
       console.error("Error fetching favorites:", error);
     }
@@ -87,6 +88,11 @@ const Weather = () => {
 
     fetchWeatherData();
   }, [location]);
+
+  const formatTime = (isoString) => {
+    const date = new Date(isoString);
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  };
 
   const checkIfNightTime = (data) => {
     const currentTime = new Date();
@@ -158,6 +164,8 @@ const Weather = () => {
             </h4>
 
             <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}° F</h4>
+            <h4>Sunrise: {formatTime(weatherData.sunriseTime)}</h4>
+          <h4>Sunset: {formatTime(weatherData.sunsetTime)}</h4>
           </div>
         ) : (
           <div className="loading-container">

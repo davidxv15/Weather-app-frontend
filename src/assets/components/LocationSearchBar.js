@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from 'axios';
 import debounce from 'lodash.debounce';
 import "./LocationSearchBar.css";
@@ -6,6 +6,24 @@ import "./LocationSearchBar.css";
 const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+
+    const handleTripleClick = (e) => {
+      if (e.detail === 3) {
+        inputRef.current.select();
+      }
+    };
+
+    const inputElement = inputRef.current;
+    inputElement.addEventListener('click', handleTripleClick);
+
+    return () => {
+      inputElement.removeEventListener('click', handleTripleClick);
+    };
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,7 +71,8 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="Enter city to get weather..."
+        placeholder="Enter location.."
+        ref={inputRef}
       />
       {suggestions.length > 0 && (
         <ul className="suggestions-list">
@@ -67,7 +86,7 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
       <div className="controls">
       <button type="submit">Search</button>
       <select onChange={(e) => onSelectFavorite(e.target.value)}>
-        <option className="option" value="none" selected disabled hidden>Favorite cities</option>
+        <option className="option" value="none" selected disabled hidden>Favorite places</option>
         {favorites.map((favorite, index) => (
           <option key={index} value={favorite}>{favorite}</option>
         ))}
