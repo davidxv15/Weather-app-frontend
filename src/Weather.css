@@ -91,7 +91,7 @@ h4 {
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
   z-index: 1;
-  box-shadow: 0 10px 20px rgba(201, 186, 186, 0.5);
+  box-shadow: 0 10px 40px rgba(201, 186, 186, 0.5);
 }
 
 .weather-info h4 {
@@ -115,6 +115,16 @@ h2 {
   transform:translateY(8px);
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(38px);
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+
 }
 
 .loading-container {
