@@ -55,7 +55,7 @@ h4 {
 }
 
 .favorite-button:hover {
-  background-color: #b68136;
+  background-color: #c08736;
   color: rgb(0, 0, 0);
   transition: background-color 0.9s;
   box-shadow: 0 10px 40px rgba(201, 186, 186, 0.5);
