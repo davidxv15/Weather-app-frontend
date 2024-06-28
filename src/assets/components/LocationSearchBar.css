@@ -63,6 +63,7 @@
   .suggestions-list li {
     padding: 4px;
     font-size: 22px;
+    font-weight: 800;
     cursor: pointer;
     color:rgb(11, 11, 111);
     background-color:rgba(171, 182, 192, 0.863);
@@ -73,7 +74,8 @@
   }
   
   .suggestions-list li:hover {
-    background-color: #eda3a3;
+    background-color: #33369b;
+    color: white;
   }
   
   select {
