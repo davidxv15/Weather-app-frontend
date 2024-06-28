@@ -1,4 +1,5 @@
 .App {
+  position: inherit;
   text-align: center;
   background-color: #0c54e6;
 }

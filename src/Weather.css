@@ -5,6 +5,7 @@
   background-color: transparent;
   font-family: 'Raleway Dots', sans-serif;
   font-weight: 800;
+  width: 100%;
 }
 
 body, html {
@@ -14,11 +15,11 @@ body, html {
 }
 
 h1 {
-  position:relative;
+  position:absolute;
   color:rgb(59, 203, 251);
   font-size: 50px;
   margin-top: -5px;
-  transform: translateY(30px);
+  transform: translateY(20px);
   text-align: center;
   align-items: center;
   width: 100%;
@@ -69,7 +70,7 @@ h4 {
   /* justify-content: center; */
   /* height: 100vh; */
   min-height: 844px;
-  width: 100%;
+  width: 100vw;
   min-width: 390px;
   padding: 20px;
   background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
@@ -86,6 +87,7 @@ h4 {
   padding: 6px;
   margin: 40px;
   text-align: center;
+  align-self: center;
   border: 2px solid rgba(255, 252, 252, 0.91);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
@@ -95,6 +97,10 @@ h4 {
   box-sizing: border-box;
   z-index: 1;
   box-shadow: 0 10px 40px rgba(201, 186, 186, 0.5);
+}
+
+.weather-info {
+  margin-bottom: 20px;
 }
 
 .weather-info h4 {
