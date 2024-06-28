@@ -88,7 +88,7 @@ h4 {
   margin: 40px;
   text-align: center;
   align-self: center;
-  border: 2px solid rgba(255, 252, 252, 0.91);
+  border: 1px solid rgba(156, 200, 210, 0.91);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   transform: translateY(-10px);
@@ -97,6 +97,11 @@ h4 {
   box-sizing: border-box;
   z-index: 1;
   box-shadow: 0 10px 40px rgba(201, 186, 186, 0.5);
+}
+
+.weather-info .temp {
+  font-size: 50px;
+  margin-top: -20px;
 }
 
 .weather-info {
@@ -114,7 +119,7 @@ h4 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 30px;
   transform:translateY(-12px)
 }
 

@@ -149,12 +149,12 @@ const Weather = () => {
           {isFavorited ? "Unfavorite" : "Favorite"}
         </button>
             <WeatherIcon code={weatherData.weatherCode} />
+              <h4 className="temp">{convertToCelsius(weatherData.temperature)}°F</h4>
             <h4>
-              Forecast:{" "}
+              {" "}
               {weatherCodes[weatherData.weatherCode] ||
                 "Description not available"}
             </h4>
-            <h4>Temperature: {convertToCelsius(weatherData.temperature)}° F</h4>
             {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
             <h4>Humidity: {weatherData.humidity}%</h4>
             <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
