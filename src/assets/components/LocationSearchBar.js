@@ -6,6 +6,7 @@ import "./LocationSearchBar.css";
 const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [selectValue, setSelectValue] = useState("none");
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -65,6 +66,11 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
     onSearch(suggestion);
   };
 
+  const handleSelectFavorite = (favoriteLocation) => {
+    onSelectFavorite(favoriteLocation);
+    setSelectValue("none");
+  }
+
   return (
       <form onSubmit={handleSubmit} className="location-search-bar">
       <input
@@ -83,15 +89,17 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
           ))}
         </ul>
       )}
-      <div className="controls">
+      
       <button type="submit">Search</button>
-      <select onChange={(e) => onSelectFavorite(e.target.value)}>
-        <option className="option" value="none" selected disabled hidden>Favorite places</option>
+      <br />
+      <select value={selectValue} onChange={(e) => handleSelectFavorite(e.target.value)}>
+        <option value="none" disabled hidden>Favorite cities</option>
         {favorites.map((favorite, index) => (
           <option key={index} value={favorite}>{favorite}</option>
         ))}
-        </select>
-       </div>
+      </select>
+
+       
       </form>
       
   );

@@ -150,7 +150,7 @@ const Weather = () => {
         </button>
             <WeatherIcon code={weatherData.weatherCode} />
               <h4 className="temp">{convertToCelsius(weatherData.temperature)}°F</h4>
-            <h4>
+            <h4 className="forecast">
               {" "}
               {weatherCodes[weatherData.weatherCode] ||
                 "Description not available"}
