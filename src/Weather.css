@@ -67,16 +67,19 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* overflow-x: hidden; */
   /* justify-content: center; */
-  /* height: 100vh; */
-  min-height: 844px;
+  height: 100vh;
+  /* min-height: 844px; */
   width: 100vw;
   min-width: 390px;
+  /* max-width: */
   padding: 20px;
-  background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
+  /* background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: transparent;
 }
 
 .wrapper {
@@ -89,8 +92,8 @@ h4 {
   text-align: center;
   align-self: center;
   border: 1px solid rgba(156, 200, 210, 0.91);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transform: translateY(-10px);
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;

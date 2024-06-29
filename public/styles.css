@@ -1,0 +1,27 @@
+body, html {
+  height: 30%;
+  margin: 0;
+  /* margin-bottom: -180px; */
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #000;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 243, 175, 0.8), rgba(255, 255, 255, 0));
+  filter: blur(2px);
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(var(--translateX), var(--translateY)); }
+}
+
+@media (max-width: 360px) {
+  body, html {
+    overflow-x: auto; /* Unhide overflow-x for very small screens */
+  }
+}

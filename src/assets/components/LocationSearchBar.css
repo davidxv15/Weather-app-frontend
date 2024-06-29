@@ -17,6 +17,8 @@
     padding: 10px;
     font-size: 22px;
     border: 1px solid #ccc;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 5px;
     margin-bottom: 10px; 
     height: 20px;
@@ -28,7 +30,7 @@
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #03607a;
+    background-color: #03607aec;
     color: white;
     border: 1px solid rgb(172, 204, 210);
     border-radius: 4px;
@@ -87,6 +89,8 @@
     font-size: 16px;
     height: 40px;
     border: 1px solid rgb(172, 204, 210);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     /* width: 99%; */
     position: relative; 
     padding: 1px 0 3px 6px;
