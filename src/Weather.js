@@ -3,8 +3,8 @@ import axios from "axios";
 import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
 import LocationSearchBar from "./assets/components/LocationSearchBar";
-import Loader from 'react-loaders';
-import 'loaders.css/loaders.min.css';
+import Loader from "react-loaders";
+import "loaders.css/loaders.min.css";
 import "./Weather.css";
 
 const Weather = () => {
@@ -69,9 +69,13 @@ const Weather = () => {
           // Modify weatherCode if it's night time
           if (isNightTime) {
             data.weatherCode = `${data.weatherCode}1`;
-            console.log(`Modified weatherCode for night time: ${data.weatherCode}`);
+            console.log(
+              `Modified weatherCode for night time: ${data.weatherCode}`
+            );
           } else {
-            console.log(`Weather code remains unchanged for day time: ${data.weatherCode}`);
+            console.log(
+              `Weather code remains unchanged for day time: ${data.weatherCode}`
+            );
           }
 
           setWeatherData(data);
@@ -91,7 +95,7 @@ const Weather = () => {
 
   const formatTime = (isoString) => {
     const date = new Date(isoString);
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
 
   const checkIfNightTime = (data) => {
@@ -101,7 +105,6 @@ const Weather = () => {
 
     return currentTime < sunrise || currentTime > sunset;
   };
-
 
   // Function to convert temperature from Celsius to Fahrenheit
   const convertToCelsius = (temperature) => {
@@ -128,7 +131,7 @@ const Weather = () => {
     return directions[index];
   };
 
-  let loader = <Loader type="ball-pulse-rise" />
+  let loader = <Loader type="ball-pulse-rise" />;
 
   return (
     <div className="container">
@@ -143,13 +146,15 @@ const Weather = () => {
           <div className="weather-info">
             <h2>{location}</h2>
             <button
-          className={`favorite-button ${isFavorited ? "favorited" : ""}`}
-          onClick={handleAddFavorite}
-        >
-          {isFavorited ? "Unfavorite" : "Favorite"}
-        </button>
+              className={`favorite-button ${isFavorited ? "favorited" : ""}`}
+              onClick={handleAddFavorite}
+            >
+              {isFavorited ? "Unfavorite" : "Favorite"}
+            </button>
             <WeatherIcon code={weatherData.weatherCode} />
-              <h4 className="temp">{convertToCelsius(weatherData.temperature)}°F</h4>
+            <h4 className="temp">
+              {convertToCelsius(weatherData.temperature)}°F
+            </h4>
             <h4 className="forecast">
               {" "}
               {weatherCodes[weatherData.weatherCode] ||
@@ -165,14 +170,13 @@ const Weather = () => {
 
             <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}° F</h4>
             <h4>Sunrise: {formatTime(weatherData.sunriseTime)}</h4>
-          <h4>Sunset: {formatTime(weatherData.sunsetTime)}</h4>
+            <h4>Sunset: {formatTime(weatherData.sunsetTime)}</h4>
           </div>
         ) : (
           <div className="loading-container">
             <p className="Loading">Checking Forecasts...</p>
             <Loader type="ball-pulse" active />
           </div>
-
         )}
       </div>
     </div>

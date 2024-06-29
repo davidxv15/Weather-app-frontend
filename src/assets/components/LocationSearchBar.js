@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import axios from 'axios';
-import debounce from 'lodash.debounce';
+import axios from "axios";
+import debounce from "lodash.debounce";
 import "./LocationSearchBar.css";
 
 const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
@@ -19,10 +19,10 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
     };
 
     const inputElement = inputRef.current;
-    inputElement.addEventListener('click', handleTripleClick);
+    inputElement.addEventListener("click", handleTripleClick);
 
     return () => {
-      inputElement.removeEventListener('click', handleTripleClick);
+      inputElement.removeEventListener("click", handleTripleClick);
     };
   }, []);
 
@@ -52,11 +52,13 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
     try {
       console.log(`Fetching suggestions for: ${query}`);
       const response = await axios.get(url);
-      console.log('API Response:', response.data);
-      const predictions = response.data.predictions.map((prediction) => prediction.description);
+      console.log("API Response:", response.data);
+      const predictions = response.data.predictions.map(
+        (prediction) => prediction.description
+      );
       setSuggestions(predictions);
     } catch (error) {
-      console.error('Error fetching suggestions:', error);
+      console.error("Error fetching suggestions:", error);
     }
   }, 300);
 
@@ -69,10 +71,10 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   const handleSelectFavorite = (favoriteLocation) => {
     onSelectFavorite(favoriteLocation);
     setSelectValue("none");
-  }
+  };
 
   return (
-      <form onSubmit={handleSubmit} className="location-search-bar">
+    <form onSubmit={handleSubmit} className="location-search-bar">
       <input
         type="text"
         value={inputValue}
@@ -89,19 +91,23 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
           ))}
         </ul>
       )}
-      
+
       <button type="submit">Search</button>
       <br />
-      <select value={selectValue} onChange={(e) => handleSelectFavorite(e.target.value)}>
-        <option value="none" disabled hidden>Favorite cities</option>
+      <select
+        value={selectValue}
+        onChange={(e) => handleSelectFavorite(e.target.value)}
+      >
+        <option value="none" disabled hidden>
+          Favorite cities
+        </option>
         {favorites.map((favorite, index) => (
-          <option key={index} value={favorite}>{favorite}</option>
+          <option key={index} value={favorite}>
+            {favorite}
+          </option>
         ))}
       </select>
-
-       
-      </form>
-      
+    </form>
   );
 };
 
