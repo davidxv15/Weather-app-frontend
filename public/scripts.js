@@ -25,3 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
     body.appendChild(orb);
   }
 });
+
+// function wrapNumbersWithSpan(selector) {
+//   const elements = document.querySelectorAll(selector);
+//   elements.forEach(element => {
+//     element.innerHTML = element.innerHTML.replace(/(\d+)/g, '<span class="number">$1</span>');
+//   });
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   wrapNumbersWithSpan('.weather-nums h4');
+// });

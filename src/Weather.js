@@ -152,8 +152,8 @@ const Weather = () => {
               {isFavorited ? "Unfavorite" : "Favorite"}
             </button>
             <WeatherIcon code={weatherData.weatherCode} />
-            <h4 className="temp">
-              {convertToCelsius(weatherData.temperature)}°F
+            <h4 className="temp"><span className="number">
+              {convertToCelsius(weatherData.temperature)}</span>°F
             </h4>
             <h4 className="forecast">
               {" "}
@@ -161,16 +161,16 @@ const Weather = () => {
                 "Description not available"}
             </h4>
             {/* <h2>Feels Like: {convertToCelsius(weatherData.temperatureApparent)}°F</h2> */}
-            <h4>Humidity: {weatherData.humidity}%</h4>
-            <h4>Wind Speed: {convertToMPH(weatherData.windSpeed)} MPH</h4>
+            <h4>Humidity: <span className="number">{weatherData.humidity}</span>%</h4>
+            <h4>Wind Speed: <span className="number">{convertToMPH(weatherData.windSpeed)}</span> MPH</h4>
             <h4>
-              Wind Direction: {weatherData.windDirection}°{" "}
+              Wind Direction: <span className="number">{weatherData.windDirection}</span>°{" "}
               {convertWindDirection(weatherData.windDirection)}
             </h4>
 
-            <h4>Dew Point: {convertDewPoint(weatherData.dewPoint)}° F</h4>
-            <h4>Sunrise: {formatTime(weatherData.sunriseTime)}</h4>
-            <h4>Sunset: {formatTime(weatherData.sunsetTime)}</h4>
+            <h4>Dew Point: <span className="number">{convertDewPoint(weatherData.dewPoint)}</span>° F</h4>
+            <h4>Sunrise: <span className="number">{formatTime(weatherData.sunriseTime)}</span></h4>
+            <h4>Sunset: <span className="number">{formatTime(weatherData.sunsetTime)}</span></h4>
           </div>
         ) : (
           <div className="loading-container">

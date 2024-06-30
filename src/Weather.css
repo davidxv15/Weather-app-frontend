@@ -27,6 +27,7 @@ h1 {
 
 h4 {
   margin: 5px;
+  display: inline;
 }
 
 .favorite-button {
@@ -114,13 +115,14 @@ h4 {
 
 .weather-info {
   margin-bottom: 25px;
+  display: inline;
 }
 
 .weather-info h4 {
   margin: 3px 0; 
   letter-spacing: 1px;
   font-size: 26px; 
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -161,3 +163,9 @@ h2 {
   /* transform: scale(2.5);  */
   padding-bottom: 15px;
 }
+
+/* .number {
+  display: inline;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 300;
+} */
