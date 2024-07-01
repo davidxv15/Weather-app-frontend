@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Gruppo&family=Honk&family=Raleway+Dots&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Gruppo&family=Honk:SHLN@86&family=Raleway+Dots&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   /* box-sizing: border-box; */
@@ -164,8 +164,8 @@ h2 {
   padding-bottom: 15px;
 }
 
-/* .number {
+.number {
   display: inline;
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 300;
-} */
+  font-family: "Urbanist", sans-serif;
+  font-weight: 200;
+}
