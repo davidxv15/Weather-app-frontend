@@ -66,7 +66,7 @@ const Weather = () => {
           // Determine if it's night time at the location
           const isNightTime = checkIfNightTime(data);
 
-          // Modify weatherCode if it's night time
+          // Modify weatherCode if it's night time, here, it's adding the '1' I need to access my nighttime version of the weatherCode icon
           if (isNightTime) {
             data.weatherCode = `${data.weatherCode}1`;
             console.log(
