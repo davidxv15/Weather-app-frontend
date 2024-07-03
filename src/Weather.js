@@ -95,7 +95,7 @@ const Weather = () => {
 
   const formatTime = (isoString) => {
     const date = new Date(isoString);
-    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    return date.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   };
 
   const checkIfNightTime = (data) => {
