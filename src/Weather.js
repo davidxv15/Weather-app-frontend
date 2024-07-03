@@ -81,7 +81,7 @@ const Weather = () => {
           setWeatherData(data);
           console.log("Current Weather Code:", data.weatherCode);
 
-          // will check if the location is already favorited!
+          // will check if the location is already favorited
           const isFavorite = favorites.includes(location);
           setIsFavorited(isFavorite);
         } catch (error) {
