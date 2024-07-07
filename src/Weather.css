@@ -20,6 +20,7 @@ h1 {
   font-size: 50px;
   margin-top: -5px;
   transform: translateY(20px);
+  /* padding-left: 8px; */
   text-align: center;
   align-items: center;
   width: 100%;
