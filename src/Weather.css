@@ -164,7 +164,7 @@ h2 {
   /* transform: scale(2.5);  */
   padding-bottom: 15px;
 }
-
+/* for display clarity of all numbers */
 .number {
   display: inline;
   font-family: "Urbanist", sans-serif;
