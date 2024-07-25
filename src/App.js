@@ -7,6 +7,7 @@ import "./App.css";
 const App = () => {
   return (
     <div className="App fade-in">
+      {/* possible animations */}
       <Header />
       <Weather />
       <Footer />
