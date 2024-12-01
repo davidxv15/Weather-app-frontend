@@ -3,7 +3,7 @@ p {
   font-size: 14px;
   transform: translateY(-12px);
   font-weight: 800;
-  /* animation: flicker 1.5s infinite alternate; */
+  /* animation: flicker 5s infinite alternate; */
   color: #fff;
 }
 
@@ -45,7 +45,7 @@ p {
 } */
 
 a:link {
-  color: blue;
+  color: rgb(255, 255, 255);
 }
 
 a:visited {
