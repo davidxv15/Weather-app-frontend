@@ -57,8 +57,8 @@ a:hover {
 }
 
 .powered {
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
-    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 11px #fff, 0 0 2px #0fa,
+    0 0 8px #0fa, 0 0 2px #0fa, 0 0 2px #0fa, 0 0 1px #0fa;
 }
 @media (max-width: 360px) {
   .powered {

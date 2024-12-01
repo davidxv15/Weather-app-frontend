@@ -10,9 +10,9 @@
   /* transform: translateY(-10px); */
   transform: translateX(4%);
   align-content: center;
-  text-shadow: 0 2px 4px rgba(217, 255, 0, 0.768);
+  /* text-shadow: 0 2px 4px rgba(217, 255, 0, 0.768); */
 }
 
 h1 {
-  
+  font-size: 4rem;
 }
