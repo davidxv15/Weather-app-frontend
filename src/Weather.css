@@ -102,7 +102,7 @@ h4 {
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
   z-index: 1;
-  box-shadow: 0 10px 40px rgba(201, 186, 186, 0.5);
+  box-shadow: 0 10px 40px rgba(201, 186, 186, 0.2);
   padding-bottom: 13px;
 }
 
