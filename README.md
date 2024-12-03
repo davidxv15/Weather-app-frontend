@@ -39,3 +39,29 @@ Once you select or search for a location, the app will display:
 - Tomorrow.io: Provides detailed and real-time weather data.  
 - Google Places API: Powers the autocomplete functionality for location searches.  
 - Sunrise-Sunset API: Fetches sunrise and sunset times for accurate weather data.
+
+### How to Run Locally
+
+1. Clone the repository:  
+   `git clone https://github.com/davidxv15/weather-frontend.git`  
+   `cd weather-frontend`
+2. Install dependencies:  
+   `npm install`
+3. Environment Setup:  
+   Create a .env file in the project root with the following variables:  
+   `REACT_APP_GOOGLE_PLACES_API_KEY=your_google_places_api_key` 
+   `REACT_APP_TOMORROW_API_KEY=your_tomorrow_api_key`
+4. Start the app:  
+ `npm start`
+5. Open the app in your browser:  
+`http://localhost:3003`
+
+### Future Features
+
+- Location-Based Updates: Automatically detect the user’s location for quick weather updates.  
+- Theme Customization: Allow users to toggle between light and dark themes.  
+- Addition of original background music on a randomized playlist.  
+- Performance Optimization: Optimize for faster loads and smoother animations.  
+
+### Deployment
+
