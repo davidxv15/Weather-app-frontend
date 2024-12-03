@@ -19,7 +19,7 @@ Once you select or search for a location, the app will display:
 - A weather icon based on the current conditions, with nighttime variations.
 
 **Additional Features**
-* **Animated Background**: A dynamic, calming animated background featuring "firefly-like" orbs.  
+* **Animated Background**: A dynamic, calming animated background featuring calming "firefly" orbs.  
 * **Responsive Design**: Fully responsive for mobile, tablet, and desktop views.  
 * **User-Friendly Interface**: Intuitive UI for an enjoyable user experience.
 
