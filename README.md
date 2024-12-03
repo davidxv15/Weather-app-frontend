@@ -60,4 +60,4 @@ Once you select or search for a location, the app will display:
 - **Performance Optimization**: Optimize for faster loads and smoother animations.  
 
 ### Deployment
-
+**Netlify**
