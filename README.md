@@ -61,3 +61,4 @@ Once you select or search for a location, the app will display:
 
 ### Deployment
 **Netlify**
+**Heroku**
