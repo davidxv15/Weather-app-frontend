@@ -1,2 +1,2 @@
-# Weather App Frontend
+# Weather App Frontend 🌦️
 Weather
