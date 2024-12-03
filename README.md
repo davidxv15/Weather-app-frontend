@@ -25,7 +25,6 @@ Once you select or search for a location, the app will display:
 
 ### Technologies Used
 **Frontend**
-
 * **React**: Core framework for building the app's interface.  
 - **Vite**: Blazing fast development environment for modern web apps.  
 - **Tailwind CSS**: Provides a clean and responsive design.
