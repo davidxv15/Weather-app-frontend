@@ -21,24 +21,24 @@ Once you select or search for a location, the app will display:
 
 **Additional Features**
 
-- Animated Background: A dynamic, calming animated background featuring "firefly-like" orbs.  
-- Responsive Design: Fully responsive for mobile, tablet, and desktop views.  
+* **Animated Background**: A dynamic, calming animated background featuring "firefly-like" orbs.  
+* **Responsive Design**: Fully responsive for mobile, tablet, and desktop views.  
 - User-Friendly Interface: Intuitive UI for an enjoyable user experience.
 
 ### Technologies Used
 
 **Frontend**
 
-- React: Core framework for building the app's interface.  
-- Vite: Blazing fast development environment for modern web apps.  
-- Tailwind CSS: Provides a clean and responsive design.
-- JavaScript: For core logic and API integrations.
+* **React**: Core framework for building the app's interface.  
+- **Vite**: Blazing fast development environment for modern web apps.  
+- **Tailwind CSS**: Provides a clean and responsive design.
+- **JavaScript**: For core logic and API integrations.
 
 **APIs**
 
-- Tomorrow.io: Provides detailed and real-time weather data.  
-- Google Places API: Powers the autocomplete functionality for location searches.  
-- Sunrise-Sunset API: Fetches sunrise and sunset times for accurate weather data.
+- **Tomorrow.io**: Provides detailed and real-time weather data.  
+- **Google Places API**: Powers the autocomplete functionality for location searches.  
+- **Sunrise-Sunset API**: Fetches sunrise and sunset times for accurate weather data.
 
 ### How to Run Locally
 
@@ -58,10 +58,10 @@ Once you select or search for a location, the app will display:
 
 ### Future Features
 
-- Location-Based Updates: Automatically detect the user’s location for quick weather updates.  
-- Theme Customization: Allow users to toggle between light and dark themes.  
-- Addition of original background music on a randomized playlist.  
-- Performance Optimization: Optimize for faster loads and smoother animations.  
+- **Location-Based Updates**: Automatically detect the user’s location for quick weather updates.  
+- **Theme Customization**: Allow users to toggle between light and dark themes.  
+- **Music**: Addition of original background lo-fi music on a randomized playlist.  
+- **Performance Optimization**: Optimize for faster loads and smoother animations.  
 
 ### Deployment
 
