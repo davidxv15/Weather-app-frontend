@@ -14,7 +14,7 @@ const Footer = () => {
           Tomorrow.io
         </a>{" "}
         &{" "}
-        <a href="https://sunrisesunset.io/" target="_blank">
+        <a href="https://sunrisesunset.io/" target="_blank" rel="noopener noreferrer">
           SunriseSunset.io
         </a>
       </p>
