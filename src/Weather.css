@@ -139,6 +139,7 @@ h2 {
 
 .Loading {
   color: rgb(59, 203, 251);
+  background-color: transparent;
   font-size: 22px;
   transform: translateY(8px);
   backdrop-filter: blur(38px);
