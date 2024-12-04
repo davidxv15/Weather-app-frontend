@@ -91,7 +91,7 @@ const Weather = () => {
     };
 
     fetchWeatherData();
-  }, [location]);
+  }, [location, favorites]);
 
   const formatTime = (isoString) => {
     const date = new Date(isoString);
