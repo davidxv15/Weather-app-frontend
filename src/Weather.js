@@ -131,7 +131,7 @@ const Weather = () => {
     return directions[index];
   };
 
-  let loader = <Loader type="ball-pulse-rise" />;
+  // let loader = <Loader type="ball-pulse-rise" />;
 
   return (
     <div className="container">
