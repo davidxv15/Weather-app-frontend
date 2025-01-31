@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const numOrbs = 80; // Number of orbs, adjust this to add more orbs
+  const numOrbs = 80; // number of orbs
   const body = document.body;
 
   for (let i = 0; i < numOrbs; i++) {
