@@ -17,3 +17,12 @@
   font-size: calc(8px + 2vmin);
   color: white;
 }
+
+/* Prevent horizontal scrolling and fix page width */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}

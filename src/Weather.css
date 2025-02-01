@@ -88,7 +88,7 @@ h4 {
 .wrapper {
   position: relative;
   width: 90%;
-  max-width: 90%;
+  max-width: 500px;
   border-radius: 10px;
   padding: 6px;
   margin: 2.5rem;
