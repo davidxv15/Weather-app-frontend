@@ -15,5 +15,8 @@
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
 }
