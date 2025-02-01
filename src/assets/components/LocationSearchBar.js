@@ -79,7 +79,7 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="Enter location.."
+        placeholder="Enter location..."
         ref={inputRef}
       />
       {suggestions.length > 0 && (

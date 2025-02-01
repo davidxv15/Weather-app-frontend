@@ -76,7 +76,7 @@ h4 {
   /* min-height: 844px; */
   width: 100vw;
   min-width: 390px;
-  /* max-width: */
+  /* max-width: 500px */
   padding: 20px;
   /* background-image: url(https://4kwallpapers.com/images/wallpapers/texture-dark-background-purple-2560x1440-3086.jpg);
   background-size: cover;
@@ -87,7 +87,7 @@ h4 {
 
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   border-radius: 10px;
   padding: 6px;
