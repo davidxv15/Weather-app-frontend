@@ -96,9 +96,9 @@ h4 {
   align-self: center;
   border: 1px solid rgba(156, 200, 210, 0.91);
   /* Purely blurred background without a solid color */
-  background: transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); 
 
   transform: translateY(-10px);
   opacity: 1;
