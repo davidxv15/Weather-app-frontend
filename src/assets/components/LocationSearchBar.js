@@ -98,7 +98,7 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
         value={selectValue}
         onChange={(e) => handleSelectFavorite(e.target.value)}
       >
-        <option value="none" disabled hidden>
+        <option value="none" className="faveCities" disabled hidden>
           Favorite cities
         </option>
         {favorites.map((favorite, index) => (
