@@ -24,7 +24,7 @@
 html, body {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
 }
@@ -37,7 +37,7 @@ html, body {
 html, body {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden; /* Completely disables horizontal scrolling */
+  /* overflow-x: hidden;  */
   margin: 0;
   padding: 0;
   position: relative; /* Ensures elements don't overflow */
@@ -52,7 +52,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Make sure inner components don’t cause extra width */
