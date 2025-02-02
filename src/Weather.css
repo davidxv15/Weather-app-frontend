@@ -102,7 +102,7 @@ h4 {
   background-color: transparent;
   
   /* Add an actual blurred element behind */
-  overflow: hidden;
+  /* overflow: hidden; */
   backdrop-filter: blur(150px) !important;
 
   transform: translateY(-10px);
