@@ -99,7 +99,7 @@ h4 {
   border: 1px solid rgba(156, 200, 210, 0.91);
   /* Purely blurred background without a solid color */
   /* Remove backdrop-filter */
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(243, 4, 4, 0.798);
   background-color: transparent;
   
   /* Add an actual blurred element behind */
