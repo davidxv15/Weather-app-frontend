@@ -70,6 +70,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
   /* overflow-x: hidden; */
   /* justify-content: center; */
   height: 100vh;
@@ -106,7 +107,7 @@ h4 {
   backdrop-filter: blur(150px) !important;
 
   transform: translateY(-10px);
-  opacity: .5;
+  opacity: 1;
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
   z-index: 1;
@@ -152,6 +153,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  color: rgb(59, 203, 251);
 }
 
 h2 {
