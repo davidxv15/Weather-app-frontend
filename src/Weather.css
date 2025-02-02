@@ -95,8 +95,13 @@ h4 {
   text-align: center;
   align-self: center;
   border: 1px solid rgba(156, 200, 210, 0.91);
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(20px);
+
+    /* Purely blurred background without a solid color */
+    background: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+    backdrop-filter: blur(25px); /* Stronger blur effect */
+    -webkit-backdrop-filter: blur(25px); /* Safari compatibility */
+  
+
   transform: translateY(-10px);
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;
