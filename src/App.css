@@ -72,11 +72,9 @@ html, body {
     opacity: 0;
     transform: translateY(-10px);
   }
-  50% { /* Shorter descent */
-    transform: translateY(0);
-  }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -90,26 +88,26 @@ footer {
 }
 
 h1 {
-  animation: fadeInOrder 0.6s ease-in forwards;
-  animation-delay: 0s; /* Instant start */
+  animation: fadeInOrder .4s ease-in forwards;
+  animation-delay: .3s; /* start */
 }
 
 .location-search-bar {
-  animation: fadeInOrder 0.6s ease-in forwards;
-  animation-delay: 0.3s; /* Starts after 0.3s */
+  animation: fadeInOrder .4s ease-in forwards;
+  animation-delay: .3s; /* starts after value in seconds */
 }
 
 .wrapper {
-  animation: fadeInOrder 0.6s ease-in forwards;
-  animation-delay: 0.6s; /* Starts after 0.6s */
+  animation: fadeInOrder 1s ease-in forwards;
+  animation-delay: 0.4s; 
 }
 
 .weather-info {
-  animation: fadeInOrder 0.6s ease-in forwards;
-  animation-delay: 1s; /* Starts after 1s */
+  animation: fadeInOrder 1s ease-in forwards;
+  animation-delay: 0.5s; 
 }
 
 footer {
   animation: fadeInOrder 1s ease-in forwards;
-  animation-delay: 1.5s; /* Last fade-in, starts at 1.5s */
+  animation-delay: 0.6s;
 }
