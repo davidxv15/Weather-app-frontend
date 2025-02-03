@@ -77,3 +77,26 @@ html, body {
     transform: translateY(0);
   }
 }
+h1 {
+  animation: fadeInOrder 1.5s ease-in-out forwards;
+}
+
+.location-search-bar {
+  animation: fadeInOrder 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.wrapper {
+  animation: fadeInOrder 1.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.weather-info {
+  animation: fadeInOrder 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+footer {
+  animation: fadeInOrder 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
