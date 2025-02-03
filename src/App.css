@@ -72,9 +72,12 @@ html, body {
     opacity: 0;
     transform: translateY(-10px);
   }
+  50% { /* Shorter descent */
+    opacity: .5;
+    transform: translateY(-5px);
+  }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -93,12 +96,12 @@ h1 {
 }
 
 .location-search-bar {
-  animation: fadeInOrder .4s ease-in forwards;
-  animation-delay: .3s; /* starts after value in seconds */
+  animation: fadeInOrder .45s ease-in forwards;
+  animation-delay: .4s; /* starts after value in seconds */
 }
 
 .wrapper {
-  animation: fadeInOrder 1s ease-in forwards;
+  animation: fadeInOrder .5s ease-in forwards;
   animation-delay: 0.4s; 
 }
 
