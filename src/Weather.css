@@ -207,3 +207,14 @@ h2 {
   font-weight: 200;
 }
 
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure content still scrolls */
+html, body {
+  overflow-y: scroll; /* Ensures vertical scrolling works */
+  -ms-overflow-style: none; /* Hide scrollbar for IE & Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}

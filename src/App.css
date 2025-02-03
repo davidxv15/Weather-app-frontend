@@ -30,7 +30,7 @@ html, body {
 }
 
 .ui-wrapper {
-  transform: translateX(-1%);
+  transform: translateX(%);
 }
 
 /* Prevents any horizontal scrolling */
