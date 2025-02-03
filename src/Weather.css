@@ -96,7 +96,7 @@ h4 {
   margin: 2.5rem auto;
   text-align: center;
   align-self: center;
-  border: 1.5px solid rgba(156, 200, 210, 0.91);
+  border: 1.6px solid rgba(156, 200, 210, 0.91);
   /* Purely blurred background without a solid color */
   /* Remove backdrop-filter */
   background: rgba(116, 24, 165, 0.088);
