@@ -77,6 +77,17 @@ html, body {
     transform: translateY(0);
   }
 }
+
+h1, 
+.location-search-bar, 
+.wrapper, 
+.weather-info, 
+footer {
+  opacity: 0; /* Now starts invisible */
+  animation-fill-mode: forwards; /* Stays visible after animation */
+}
+
+
 h1 {
   animation: fadeInOrder .8s ease-in forwards;
 }
