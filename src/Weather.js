@@ -141,6 +141,7 @@ const Weather = () => {
         favorites={favorites}
         onSelectFavorite={handleSelectFavorite}
       />
+      <div className="weather-card-bg">
       <div className="wrapper">
         {weatherData ? (
           <div className="weather-info">
@@ -206,6 +207,7 @@ const Weather = () => {
             <Loader type="ball-pulse" active />
           </div>
         )}
+      </div>
       </div>
     </div>
   );
