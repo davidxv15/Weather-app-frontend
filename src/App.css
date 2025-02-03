@@ -78,25 +78,25 @@ html, body {
   }
 }
 h1 {
-  animation: fadeInOrder 1.3s ease-in forwards;
+  animation: fadeInOrder .8s ease-in forwards;
 }
 
 .location-search-bar {
-  animation: fadeInOrder 1.5s ease-in forwards;
+  animation: fadeInOrder 1.1s ease-in forwards;
   animation-delay: 0.5s;
 }
 
 .wrapper {
-  animation: fadeInOrder 1.7s ease-in forwards;
+  animation: fadeInOrder 1.4s ease-in forwards;
   animation-delay: 1s;
 }
 
 .weather-info {
-  animation: fadeInOrder 2.1s ease-in forwards;
+  animation: fadeInOrder 1.7s ease-in forwards;
   animation-delay: 1.5s;
 }
 
 footer {
-  animation: fadeInOrder 2.3s ease-in forwards;
-  animation-delay: 2s;
+  animation: fadeInOrder 2s ease-in forwards;
+  animation-delay: 2.2s;
 }

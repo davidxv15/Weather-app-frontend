@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="App fade-in ui-wrapper">
+    <div className="App ui-wrapper">
       {/* possible animations */}
       <Header />
       <Weather />
