@@ -83,8 +83,8 @@ h1,
 .wrapper, 
 .weather-info, 
 footer {
-  opacity: 0; /* Now starts invisible */
-  animation-fill-mode: forwards; /* Stays visible after animation */
+  opacity: 0; 
+  animation-fill-mode: forwards; 
 }
 
 
