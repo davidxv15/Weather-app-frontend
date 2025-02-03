@@ -30,6 +30,8 @@ h1 {
 h4 {
   margin: 5px;
   display: inline;
+  filter: none;
+  z-index: 9;
 }
 
 .favorite-button {
@@ -89,7 +91,7 @@ h4 {
 }
 
 .weather-card-bg {
-  filter: none;
+  filter: blur(5px);
 }
 
 .wrapper {
@@ -111,7 +113,6 @@ h4 {
   /* overflow: hidden; */
   /* backdrop-filter: blur(150px) !important; */
   transform: translateY(-10px);
-  filter: blur(5px);
   opacity: 1;
   animation: fadeIn 1.9s ease forwards;
   box-sizing: border-box;
@@ -161,11 +162,6 @@ h4 {
   color: rgb(59, 203, 251);
   z-index: 9;
   filter: none;
-}
-
-h4 {
-  filter: none;
-  z-index: 9;
 }
 
 h2 {
