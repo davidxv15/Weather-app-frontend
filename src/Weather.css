@@ -91,7 +91,7 @@ h4 {
 }
 
 .weather-card-bg {
-  filter: blur(5px);
+  /* filter: blur(5px); */
 }
 
 .wrapper {
