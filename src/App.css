@@ -72,7 +72,7 @@ html, body {
     opacity: 0;
     transform: translateY(-10px);
   }
-  30% { /* Shorter descent */
+  50% { /* Shorter descent */
     transform: translateY(0);
   }
   to {
