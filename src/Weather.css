@@ -114,7 +114,7 @@ h4 {
   /* backdrop-filter: blur(150px) !important; */
   transform: translateY(-10px);
   opacity: 1;
-  animation: fadeIn 1.9s ease forwards;
+  /* animation: fadeIn 1.9s ease forwards; */
   box-sizing: border-box;
   z-index: 1;
   box-shadow: 0 10px 40px rgba(201, 186, 186, 0.2);
