@@ -1,8 +1,8 @@
 :root {
-  --primary-color: rgb(59, 203, 251); /* Your main electric blue */
-  --secondary-color: rgba(54, 7, 80, 0.657); /* Deep purple haze */
-  --tertiary-color: white; /* For contrast & clarity */
-  --highlight-color: orange; /* The default input border color */
+  --primary-color: rgb(59, 203, 251); 
+  --secondary-color: rgba(54, 7, 80, 0.657); 
+  --tertiary-color: rgba(248, 244, 244, 0.966); 
+  --highlight-color: orange;
 }
 
 
