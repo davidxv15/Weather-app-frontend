@@ -106,7 +106,7 @@ h4 {
   border: 1.6px solid rgba(156, 200, 210, 0.91);
   /* Purely blurred background without a solid color */
   /* Remove backdrop-filter */
-  background: rgba(153, 8, 231, 0.858);
+  background: rgba(54, 7, 80, 0.657);
   /* background-color: rgba(0, 0, 0, 0.9); */
   
   /* Add an actual blurred element behind */
@@ -130,7 +130,7 @@ h4 {
   height: 100%;
   /* backdrop-filter: blur(300px); 
   -webkit-backdrop-filter: blur(200px); */
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
   border-radius: inherit;
 }
