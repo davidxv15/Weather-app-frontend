@@ -1,7 +1,7 @@
 p {
   color: rgb(255, 255, 255);
   font-size: 14px;
-  transform: translateY(-12px);
+  transform: translateY(8rem);
   font-weight: 800;
   /* animation: flicker 5s infinite alternate; */
   color: #fff;
