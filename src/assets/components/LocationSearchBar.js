@@ -48,7 +48,7 @@ const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   };
 
   const fetchSuggestions = debounce(async (query) => {
-    const url = `http://localhost:3000/places?input=${query}`;
+    const url = `${backendURL}/places?input=${query}`;
 
     try {
       console.log(`Fetching suggestions for: ${query}`);
