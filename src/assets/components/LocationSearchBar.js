@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import debounce from "lodash.debounce";
 import "./LocationSearchBar.css";
-import { backendURL } from "../config";
+import { backendURL } from "./assets/config";
 
 const LocationSearchBar = ({ onSearch, favorites, onSelectFavorite }) => {
   const [inputValue, setInputValue] = useState("");
