@@ -37,7 +37,7 @@ const Weather = () => {
   const handleAddFavorite = async () => {
     if (location) {
       try {
-        const response = await axios.post("http://localhost:3000/favorites", {
+        const response = await axios.post(`${backendURL}/favorites`, {
           location,
         });
         console.log(response.data.message);
