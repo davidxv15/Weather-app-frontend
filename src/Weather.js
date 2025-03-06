@@ -6,6 +6,7 @@ import LocationSearchBar from "./assets/components/LocationSearchBar";
 import Loader from "react-loaders";
 import "loaders.css/loaders.min.css";
 import "./Weather.css";
+import { backendURL } from "./config";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
