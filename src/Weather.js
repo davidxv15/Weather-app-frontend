@@ -190,10 +190,10 @@ const Weather = () => {
             </h4>
 
             {/* For Local time of user's location */}
-            <h4>
+            {/* <h4>
   Local Time:{" "}
   <span className="number">{formatTime(weatherData.localTime)}</span>
-</h4>
+</h4> */}
 
             <h4>
               Sunrise:{" "}
