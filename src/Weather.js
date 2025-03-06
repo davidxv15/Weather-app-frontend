@@ -188,6 +188,8 @@ const Weather = () => {
               </span>
               ° F
             </h4>
+
+            {/* For Local time of user's location */}
             <h4>
   Local Time:{" "}
   <span className="number">{formatTime(weatherData.localTime)}</span>
