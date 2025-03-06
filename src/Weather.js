@@ -26,7 +26,7 @@ const Weather = () => {
 
   const fetchFavorites = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/favorites");
+      const response = await axios.get(`${backendURL}/favorites`);
       const sortedFavorites = response.data.map((fav) => fav.location).sort();
       setFavorites(sortedFavorites);
     } catch (error) {
