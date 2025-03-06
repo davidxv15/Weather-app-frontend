@@ -1,5 +1,5 @@
 # Weather App Frontend 🌦️
-A sleek and modern weather application built with React and Vite, utilizing real-time APIs for weather data and location autocomplete.
+A modern weather application built with React and Vite, utilizing real-time APIs for weather data and location autocomplete.
 
 ## How to Use the App?
 
