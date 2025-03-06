@@ -189,6 +189,11 @@ const Weather = () => {
               ° F
             </h4>
             <h4>
+  Local Time:{" "}
+  <span className="number">{formatTime(weatherData.localTime)}</span>
+</h4>
+
+            <h4>
               Sunrise:{" "}
               <span className="number">
                 {formatTime(weatherData.sunriseTime)}
