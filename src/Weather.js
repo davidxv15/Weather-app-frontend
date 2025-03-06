@@ -58,7 +58,7 @@ const Weather = () => {
       if (location) {
         try {
           console.log("Fetching weather data for location:", location);
-          const response = await axios.get("http://localhost:3000/weather", {
+          const response = await axios.get(`${backendURL}/weather`, {
             params: { location },
           });
 
