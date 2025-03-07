@@ -4,6 +4,7 @@ import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
 import LocationSearchBar from "./assets/components/LocationSearchBar";
 import Loader from "react-loaders";
+import SingingBowl from "./SingingBowl";
 import "loaders.css/loaders.min.css";
 import "./Weather.css";
 import { backendURL } from "./config";
