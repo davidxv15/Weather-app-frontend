@@ -146,7 +146,8 @@ const Weather = () => {
         favorites={favorites}
         onSelectFavorite={handleSelectFavorite}
         />
-        {showSingingBowl && <SingingBowl />} {/* Render after user interaction */}
+        {showSingingBowl && <SingingBowl playSound={showSingingBowl} />}
+ {/* Render after user interaction */}
         </div>
       <div className="weather-card-bg">
       <div className="wrapper">
