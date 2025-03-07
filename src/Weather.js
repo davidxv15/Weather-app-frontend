@@ -15,12 +15,12 @@ const Weather = () => {
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
   const [isFavorited, setIsFavorited] = useState(false);
-  const [showSingingBowl, setShowSingingBowl] = useState(false);
+  const [playSound, setPlaySound] = useState(false);
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
     setLocation(newLocation);
-    setShowSingingBowl(true);
+    setPlaySound(true); 
   };
 
   const handleSelectFavorite = (favoriteLocation) => {
