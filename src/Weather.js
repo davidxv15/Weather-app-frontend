@@ -139,7 +139,8 @@ const Weather = () => {
 
   return (
     <div className="container">
-      <SingingBowl playSound={playSound} />
+      {/* SOUND BELOW */}
+      {/* <SingingBowl playSound={playSound} /> */}
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
