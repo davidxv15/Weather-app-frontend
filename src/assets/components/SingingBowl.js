@@ -11,7 +11,7 @@ const SingingBowl = ({ playSound }) => {
 
   return (
     <audio ref={audioRef} loop>
-      <source src="/SingingBowl.mp3" type="audio/mpeg" />
+      <source src="SingingBowl.mp3" type="audio/mpeg" />
     </audio>
   );
 };
