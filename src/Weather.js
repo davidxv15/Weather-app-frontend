@@ -140,15 +140,14 @@ const Weather = () => {
   return (
     <div className="container">
       <div>
-      <input type="text" onBlur={(e) => handleSearch(e.target.value)} placeholder="Enter location..." />
-      {showSingingBowl && <SingingBowl />} {/* Render after user interaction */}
-    </div>
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
         favorites={favorites}
         onSelectFavorite={handleSelectFavorite}
-      />
+        />
+        {showSingingBowl && <SingingBowl />} {/* Render after user interaction */}
+        </div>
       <div className="weather-card-bg">
       <div className="wrapper">
         {weatherData ? (
