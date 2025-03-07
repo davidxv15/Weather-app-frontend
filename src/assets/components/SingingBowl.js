@@ -1,18 +1,31 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const SingingBowl = ({ playSound }) => {
+const SingingBowl = () => {
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    if (playSound && audioRef.current) {
-      audioRef.current.play().catch((error) => console.log("Playback blocked:", error));
+  // Function to handle audio play/pause
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.log("Playback blocked:", error));
+      }
+      setIsPlaying(!isPlaying);
     }
-  }, [playSound]); // Play when `playSound` is true
+  };
 
   return (
-    <audio ref={audioRef} loop>
-      <source src="SingingBowl.mp3" type="audio/mpeg" />
-    </audio>
+    <div>
+      <button onClick={toggleAudio} className="play-button">
+        {isPlaying ? "⏸️ Pause" : "▶️ Play"}
+      </button>
+      
+      <audio ref={audioRef} loop>
+        <source src="SingingBowl.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
   );
 };
 
