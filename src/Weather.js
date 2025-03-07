@@ -4,7 +4,7 @@ import weatherCodes from "./weatherCodes.json";
 import WeatherIcon from "./assets/components/WeatherIcon";
 import LocationSearchBar from "./assets/components/LocationSearchBar";
 import Loader from "react-loaders";
-// import SingingBowl from "./assets/components/SingingBowl";
+import SingingBowl from "./assets/components/SingingBowl";
 import "loaders.css/loaders.min.css";
 import "./Weather.css";
 import { backendURL } from "./config";
@@ -15,7 +15,7 @@ const Weather = () => {
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
   const [isFavorited, setIsFavorited] = useState(false);
-  // const [playSound, setPlaySound] = useState(false);
+  const [playSound, setPlaySound] = useState(false);
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
@@ -140,7 +140,7 @@ const Weather = () => {
   return (
     <div className="container">
       {/* SOUND BELOW */}
-      {/* <SingingBowl playSound={playSound} /> */}
+      <SingingBowl playSound={playSound} />
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
