@@ -139,16 +139,13 @@ const Weather = () => {
 
   return (
     <div className="container">
-      <div>
+      <SingingBowl playSound={playSound} />
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
         favorites={favorites}
         onSelectFavorite={handleSelectFavorite}
-        />
-        {showSingingBowl && <SingingBowl playSound={showSingingBowl} />}
- {/* Render after user interaction */}
-        </div>
+      />
       <div className="weather-card-bg">
       <div className="wrapper">
         {weatherData ? (
