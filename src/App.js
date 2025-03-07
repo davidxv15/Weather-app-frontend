@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div className="App ui-wrapper">
       {/* possible animations */}
+      <SingingBowl />
       <Header />
       <Weather />
       <Footer />
