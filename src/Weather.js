@@ -15,12 +15,12 @@ const Weather = () => {
   // const [location, setLocation] = useState("42.3478,-71.0466"); //MAKE EMPTY
   const [favorites, setFavorites] = useState([]);
   const [isFavorited, setIsFavorited] = useState(false);
-  const [playSound, setPlaySound] = useState(false);
+  const [showSingingBowl, setShowSingingBowl] = useState(false);
 
   const handleSearch = (newLocation) => {
     console.log("New location:", newLocation);
     setLocation(newLocation);
-    setPlaySound(true); 
+    setShowSingingBowl(true);
   };
 
   const handleSelectFavorite = (favoriteLocation) => {
@@ -139,7 +139,10 @@ const Weather = () => {
 
   return (
     <div className="container">
-      <SingingBowl playSound={playSound} />
+      <div>
+      <input type="text" onBlur={(e) => handleSearch(e.target.value)} placeholder="Enter location..." />
+      {showSingingBowl && <SingingBowl />} {/* Render after user interaction */}
+    </div>
       {/* <h1>Weather App</h1> */}
       <LocationSearchBar
         onSearch={handleSearch}
