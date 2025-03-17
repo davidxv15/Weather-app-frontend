@@ -1,4 +1,4 @@
-# Weather App Frontend 🌦️
+# Weather App Frontend 🌦️  [![Netlify Status](https://api.netlify.com/api/v1/badges/04c8f089-0de1-4778-b889-cdfe93b5aa60/deploy-status)](https://app.netlify.com/sites/weathergetterapp/deploys)
 A modern weather application built with React and Vite, utilizing real-time APIs for weather data and location autocomplete.
 
 ## How to Use the App?
